@@ -1,0 +1,21 @@
+{
+    "name": "ostrikov-g/docker-for-slim",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gleb Ostrikov",
+            "email": "ostgleal@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^4.10",
+        "laminas/laminas-diactoros": "^2.13",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "OstrikovG\\DockerForSlim\\": "src/"
+        }
+    }
+}

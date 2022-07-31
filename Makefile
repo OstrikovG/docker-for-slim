@@ -9,7 +9,7 @@ help:
 ##Project
 ##-------
 
-install: .env.local up vendor-init ## Install application.
+install: .env.local up vendor ## Install application.
 .PHONY: install
 
 up: ## Start development docker environment.
@@ -27,10 +27,7 @@ rebuild: ## Rebuild development docker environment.
 
 vendor: composer.lock ## Install composer dependencies.
 	${PHP} composer install
-
-vendor-init: ## Needed to initially deploy the project. Difference between 'vendor' and 'vendor-init' is that last can be executed multiple times.
-	${PHP} composer install
-.PHONY: vendor-init
+.PHONY: vendor
 
 .env.local: .env
 	@if [ -f .env.local ]; \
